@@ -68,10 +68,13 @@ let g:lsp_diagnostics_highlights_enabled = 1
 nnoremap <silent> <C-l> :bnext<CR>
 nnoremap <silent> <C-h> :bprevious<CR>
 
-" Open fzf 
+" Open fzf with a preview and open selected file in a new buffer
 nnoremap <C-p> :call fzf#run({
   \ 'sink': 'edit',
   \ 'source': 'find . -type f',
   \ 'options': '--preview "head -100 {}"'
   \})<CR>
 ```
+
+## Bye
+Vim and NVim customization got too complex in my opinion.  This works as a config backup for me and hope it is helpful to others.  
