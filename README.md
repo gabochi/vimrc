@@ -63,17 +63,22 @@ let g:lsp_diagnostics_highlights_enabled = 1
 ```
 
 ### 4. Some custom shortcut
+Remember that the specific terminal emulator and other programs can interfere.
+I quit ghostty because it messed all my custom mapping, don't know exactly why :(
 ```vim
-" Move among buffers
-nnoremap <silent> <C-l> :bnext<CR>
-nnoremap <silent> <C-h> :bprevious<CR>
+" define space as leader key
+let mapleader = " "
 
-" Open fzf with a preview and open selected file in a new buffer
-nnoremap <C-p> :call fzf#run({
-  \ 'sink': 'edit',
-  \ 'source': 'find . -type f',
-  \ 'options': '--preview "head -100 {}"'
-  \})<CR>
+" next and previous buffer (not so vital, sometimes i use C-i C-o)
+nnoremap <leader>n :bne<CR>
+nnoremap <leader>p :bpre<CR>
+
+" write and quit
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+
+" f for fuzzy find
+nnoremap <leader>f :call fzf#run({ 'sink': 'edit'})<CR>
 ```
 
 ## Bye
