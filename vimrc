@@ -1,5 +1,6 @@
 set number
 "set relativenumber
+set hlsearch
 
 call plug#begin('~/.vim/plugged')
 
