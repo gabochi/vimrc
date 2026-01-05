@@ -19,12 +19,13 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 ## explanation
 
-### 1. line numbers
+### 1. line numbers and hlsearch
 ```vim
 set number
 "set relativenumber
+set hlsearch
 ```
-Use line number, *relative* line number commented in case you prefer.
+Use line number, *relative* line number commented in case you prefer and highlight search results.
 
 ### 2. A few plug-ins
 ```vim
