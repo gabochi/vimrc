@@ -1,5 +1,6 @@
-set number
-"set relativenumber
+"set number
+set hidden
+set relativenumber
 set hlsearch
 
 call plug#begin('~/.vim/plugged')
@@ -31,9 +32,10 @@ let g:lsp_diagnostics_highlights_enabled = 1
 
 let mapleader = " "
 
-nnoremap <leader>n :bne<CR>
-nnoremap <leader>p :bpre<CR>
+nnoremap <leader>n :bne!<CR>
+nnoremap <leader>p :bpre!<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
+nnoremap <leader>t :term<CR>
 
 nnoremap <leader>f :call fzf#run({ 'sink': 'edit'})<CR>
